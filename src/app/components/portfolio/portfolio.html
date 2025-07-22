@@ -1,29 +1,59 @@
-    <section id="portfolio" class="section-padding bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2>My <span>PORTFOLIO</span></h2>
-          </div>
-        </div>
-        
-        <div class="row mt-5">
-          <div *ngFor="let project of projects" class="col-md-6 col-lg-4 mb-4">
-            <div class="card h-100">
-              <img [src]="'./assets/images/portfolio/' + project.image" class="card-img-top" [alt]="project.title">
-              <div class="card-body">
-                <h5 class="card-title">{{project.title}}</h5>
-                <p class="card-text">{{project.description}}</p>
-                <div class="mb-3">
-                  <span *ngFor="let tech of project.technologies" class="badge bg-secondary me-1">{{tech}}</span>
-                </div>
-              </div>
-              <div *ngIf="project.links" class="card-footer bg-transparent">
-                <div *ngFor="let link of project.links" class="d-grid gap-2">
-                  <a [href]="link.url" target="_blank" class="btn btn-sm btn-outline-primary">{{link.name}}</a>
-                </div>
-              </div>
+<section id="portfolio" class="portfolio-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">My <span>Portfolio</span></h2>
+      <p class="section-subtitle">Explore my recent projects and work</p>
+    </div>
+
+    <div class="projects-grid">
+      <div
+        *ngFor="let project of projects; let i = index"
+        class="project-card"
+        [class.hovered]="hoveredProject === i"
+        (mouseenter)="setHover(i)"
+        (mouseleave)="setHover(null)"
+      >
+        <div class="project-image-wrapper">
+          <img
+            [ngSrc]="'./assets/images/portfolio/' + project.image"
+            [alt]="project.title"
+            fill
+            class="project-image"
+            priority
+          />
+          <div class="project-overlay">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <div class="tech-badges">
+              <span
+                *ngFor="let tech of project.technologies"
+                class="tech-badge"
+                >{{ tech }}</span
+              >
             </div>
           </div>
         </div>
+
+        <div class="project-content">
+          <p class="project-description">{{ project.description }}</p>
+
+          <div *ngIf="project.links" class="project-links">
+            <a
+              *ngFor="let link of project.links"
+              [href]="link.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              {{ link.name }}
+              <svg class="link-icon" viewBox="0 0 24 24">
+                <path
+                  d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>

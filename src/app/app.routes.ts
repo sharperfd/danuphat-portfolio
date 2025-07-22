@@ -6,10 +6,16 @@ import { SkillsComponent } from './components/skills/skills';
 import { PortfolioComponent } from './components/portfolio/portfolio';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent, title: 'Danuphat Panwong - Home' },
-  { path: 'profile', component: ProfileComponent, title: 'Danuphat Panwong - Profile' },
-  { path: 'education', component: EducationComponent, title: 'Danuphat Panwong - Education' },
-  { path: 'skills', component: SkillsComponent, title: 'Danuphat Panwong - Skills' },
-  { path: 'portfolio', component: PortfolioComponent, title: 'Danuphat Panwong - Portfolio' },
-  { path: '**', redirectTo: '' }
+  {
+    path: '',
+    component: HomeComponent,
+    children: [
+      { path: '', redirectTo: '', pathMatch: 'full' },
+      { path: '', component: HomeComponent },
+      { path: 'profile', component: ProfileComponent },
+      { path: 'education', component: EducationComponent },
+      { path: 'skills', component: SkillsComponent },
+      { path: 'portfolio', component: PortfolioComponent },
+    ],
+  },
 ];

@@ -6,6 +6,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './education.html',
-  styleUrls: ['./education.scss']
+  styleUrls: ['./education.scss'],
 })
-export class EducationComponent { }
+export class EducationComponent {}

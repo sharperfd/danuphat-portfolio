@@ -1,0 +1,106 @@
+$primary-color: #3498db;
+$secondary-color: #2c3e50;
+$light-color: #ecf0f1;
+$dark-color: #2c3e50;
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.section-header {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+
+  .section-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #212529;
+    position: relative;
+    display: inline-block;
+
+    span {
+      color: #3498db;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(
+          90deg,
+          #3498db 0%,
+          rgba(52, 152, 219, 0.3) 100%
+        );
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-header {
+    background: linear-gradient(45deg, $secondary-color, $primary-color);
+    border-bottom: none;
+  }
+
+  .list-group-item {
+    background: transparent;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: rgba($primary-color, 0.1);
+    }
+  }
+}
+
+.gradient-button {
+  background: linear-gradient(45deg, $primary-color, #00d4ff);
+  border: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: linear-gradient(45deg, #0056b3, #00aaff);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+  }
+}
+
+.btn-outline-primary {
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $primary-color;
+    color: $light-color !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+  }
+}
+
+.lead {
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+
+h2 span {
+  font-weight: 700;
+  color: $primary-color;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}

@@ -12,7 +12,7 @@ import { FooterComponent } from './components/footer/footer';
     <router-outlet></router-outlet>
     <app-footer></app-footer>
   `,
-  styles: []
+  styles: [],
 })
 export class AppComponent {
   title = 'danuphat-portfolio';

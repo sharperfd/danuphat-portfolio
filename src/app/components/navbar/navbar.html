@@ -1,30 +1,44 @@
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" routerLink="/">
-          <span class="logo">Portfolio<span>DANUPHAT</span></span>
-        </a>
-        <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div [ngbCollapse]="isCollapsed" class="collapse navbar-collapse">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/" (click)="isCollapsed = true">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/profile" (click)="isCollapsed = true">Profile</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/education" (click)="isCollapsed = true">Education</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/skills" (click)="isCollapsed = true">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/portfolio" (click)="isCollapsed = true">Portfolio</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" (click)="scrollTo('')">
+      <span class="logo">Portfolio<span>DANUPHAT</span></span>
+    </a>
+    <button
+      class="navbar-toggler"
+      (click)="isCollapsed = !isCollapsed"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div [ngbCollapse]="isCollapsed" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item" [class.active]="activeSection === 'home'">
+          <a class="nav-link" (click)="scrollTo('home')">
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="nav-item" [class.active]="activeSection === 'profile'">
+          <a class="nav-link" (click)="scrollTo('profile')">
+            <span>Profile</span>
+          </a>
+        </li>
+        <li class="nav-item" [class.active]="activeSection === 'education'">
+          <a class="nav-link" (click)="scrollTo('education')">
+            <span>Education</span>
+          </a>
+        </li>
+        <li class="nav-item" [class.active]="activeSection === 'skills'">
+          <a class="nav-link" (click)="scrollTo('skills')">
+            <span>Skills</span>
+          </a>
+        </li>
+        <li class="nav-item" [class.active]="activeSection === 'portfolio'">
+          <a class="nav-link" (click)="scrollTo('portfolio')">
+            <span>Portfolio</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

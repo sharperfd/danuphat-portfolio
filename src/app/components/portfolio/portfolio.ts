@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 
 interface Project {
   title: string;
@@ -15,7 +16,7 @@ interface Project {
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgOptimizedImage],
   templateUrl: './portfolio.html',
   styleUrls: ['./portfolio.scss'],
 })
@@ -38,9 +39,12 @@ export class PortfolioComponent {
       links: [
         {
           name: 'Play Store',
-          url: 'https://play.google.com/store/apps/details?id=com.example.ecommerce',
+          url: 'https://play.google.com/store/apps/details?id=com.krungsri.disales&pcampaignid=web_share',
         },
-        { name: 'App Store', url: 'https://apps.apple.com/app/id123456789' },
+        {
+          name: 'App Store',
+          url: 'itms-services://?action=download-manifest&url=https://www.krungsri.com/DisalesDownload/manifest.plist',
+        },
       ],
     },
     {
@@ -58,7 +62,13 @@ export class PortfolioComponent {
         'MQ',
       ],
       image: 'lamp.jpg',
-      links: [{ name: 'Live Demo', url: 'https://erp-demo.example.com' }],
+      links: [{ name: 'Live Demo', url: 'https://lamp-demo.example.com' }],
     },
   ];
+
+  hoveredProject: number | null = null;
+
+  setHover(index: number | null) {
+    this.hoveredProject = index;
+  }
 }
