@@ -1,59 +1,163 @@
-# DanuphatPortfolio
+# Danuphat Panwong's Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.1.
+Welcome to my personal portfolio website, showcasing my skills, education, and professional journey as a Software Engineer. This project is built with **Angular 17+** using standalone components, Bootstrap for styling, and Font Awesome for icons, demonstrating my expertise in modern web development.
 
-## Development server
+## Table of Contents
+- [About Me](#about-me)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup and Installation](#setup-and-installation)
+- [Usage](#usage)
+- [Contact](#contact)
+- [License](#license)
 
-To start a local development server, run:
+## About Me
+I'm **Danuphat Panwong**, a passionate Software Engineer with a Bachelor’s Degree in Computer Engineering from Sripatum University (2013–2016, GPA: 3.96). My expertise spans programming languages, frameworks, databases, and other technologies, with a focus on building robust, user-friendly applications. I have a strong background in Java, C, Python, Angular, and cloud technologies, complemented by certifications and specialized training in software development and IoT.
 
-```bash
-ng serve
-```
+### Education
+- **Bachelor of Computer Engineering**, Sripatum University (2013–2016, GPA: 3.96)
+  - Highlights: Java/C/Python Programming, Internet of Things (IoT), Embedded Systems, Machine Vision
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Certifications
+- **ICTE-TPQI**: Certified Software and Applications, 2016
+- **ICDL**: Certified International Computer Driving License (Database), 2016
+- **ITPE**: Certified Information Technology Passport Examination (IP), 2015
 
-## Code scaffolding
+### Training
+- **The Best of the Best on Embedded Systems Developers**, TESA Top Gun Rally #11, 2017
+- **NECTEC Internet of Things Camp**, 2016
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Features
+This portfolio website includes the following sections:
+- **Home**: A welcome section with my profile picture, title (Software Engineer), and links to my GitHub, LinkedIn, and email.
+- **Skills**: A visual representation of my technical skills across programming languages (e.g., .NET C#, TypeScript, Python), frameworks (e.g., Angular, Flutter), databases (e.g., SQL Server, MongoDB), and other technologies (e.g., Docker, Azure).
+- **Education**: Details of my academic background, certifications, and training programs.
+- **Portfolio** (planned): A showcase of my projects and contributions (to be implemented).
 
-```bash
-ng generate component component-name
-```
+## Technologies Used
+- **Frontend**: Angular 17+, Bootstrap 5, Font Awesome, Bootstrap Icons
+- **Languages**: TypeScript, HTML, SCSS
+- **Tools**: Node.js, npm, Angular CLI
+- **Dependencies**:
+  - `@angular/core`, `@angular/common`, `@angular/animations`
+  - `bootstrap`, `bootstrap-icons`, `@fortawesome/angular-fontawesome`
+  - `zone.js` for Angular change detection
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Setup and Installation
+To run this portfolio locally, follow these steps:
 
-```bash
-ng generate --help
-```
+### Prerequisites
+- **Node.js**: Version 18.x or 20.x
+- **Angular CLI**: Version 17.x (`npm install -g @angular/cli`)
 
-## Building
+### Steps
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/sharperfd/danuphat-portfolio.git
+   cd danuphat-portfolio
+   ```
 
-To build the project run:
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
 
-```bash
-ng build
-```
+3. **Run the Development Server**
+   ```bash
+   npm run start
+   ```
+   The application will be available at `http://localhost:4200`.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+4. **Build for Production**
+   ```bash
+   ng build --configuration production
+   ```
+   The output will be in the `dist/danuphat-portfolio` directory.
 
-## Running unit tests
+### Notes
+- Ensure `bootstrap`, `bootstrap-icons`, and `@fortawesome/angular-fontawesome` are installed for styling and icons.
+- The project uses standalone Angular components, so no `NgModule` is required.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## Usage
+- Navigate to `http://localhost:4200` to view the portfolio.
+- Explore sections via the navigation:
+  - `/`: Home page with my introduction and social links.
+  - `/skills`: View my technical skills with progress bars.
+  - `/education`: Learn about my academic background and certifications.
+- The `typing-animation` on the home page adds a dynamic effect to my title (Software Engineer).
 
-```bash
-ng test
-```
+## Contact
+Feel free to reach out to me:
+- **GitHub**: [github.com/sharperfd](https://github.com/sharperfd)
+- **LinkedIn**: [linkedin.com/in/danuphat-panwong](https://www.linkedin.com/in/danuphat-panwong/)
+- **Email**: [danuphat.pan@gmail.com](mailto:danuphat.pan@gmail.com)
 
-## Running end-to-end tests
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-For end-to-end (e2e) testing, run:
 
-```bash
-ng e2e
-```
+### Explanation of the README
+1. **Overview**:
+   - Introduces your portfolio as a showcase of your skills and professional journey.
+   - Mentions the use of Angular 17+, standalone components, Bootstrap, and Font Awesome, based on your project’s setup.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+2. **About Me**:
+   - Includes your name, role (Software Engineer), and education from Sripatum University (2013–2016, GPA: 3.96) with highlights (Java/C/Python, IoT, Embedded Systems, Machine Vision).
+   - Lists certifications (ICTE-TPQI, ICDL, ITPE) and training (TESA, NECTEC) from your `EducationComponent`.
 
-## Additional Resources
+3. **Features**:
+   - Describes the `Home`, `Skills`, and `Education` sections, matching your provided templates.
+   - Notes a planned `Portfolio` section, as referenced in your previous `angular.json` routes.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+4. **Technologies Used**:
+   - Lists Angular, Bootstrap, Font Awesome, and other dependencies, aligning with your `angular.json` and `HomeComponent` (using `<fa-icon>`).
+
+5. **Setup and Installation**:
+   - Provides clear instructions to clone, install, and run the project, tailored to Angular 17+.
+   - Includes prerequisites (Node.js, Angular CLI) and notes about standalone components.
+
+6. **Contact**:
+   - Incorporates your GitHub (`https://github.com/sharperfd`), LinkedIn (`https://www.linkedin.com/in/danuphat-panwong/`), and email (`danuphat.pan@gmail.com`), matching your `HomeComponent`.
+
+7. **License**:
+   - Assumes an MIT License, standard for personal portfolios. You can adjust this if needed.
+
+### Integration with Your Project
+1. **Save the README**:
+   - Place the provided `README.md` in the root of your `danuphat-portfolio` project (next to `angular.json`).
+   - Commit it to your GitHub repository (`https://github.com/sharperfd/danuphat-portfolio`).
+
+2. **Verify Dependencies**:
+   - Ensure all mentioned dependencies are installed:
+     ```bash
+     npm install bootstrap bootstrap-icons @fortawesome/fontawesome-svg-core @fortawesome/free-brands-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/angular-fontawesome zone.js @angular/animations
+     ```
+   - Check `package.json` to confirm versions align with Angular 17+ (e.g., `^17.0.0` for Angular packages, `^0.14.0` for `zone.js`).
+
+3. **Update `angular.json`**:
+   - Your `angular.json` (from previous fixes) is correctly set up with `polyfills: ["zone.js"]` and Bootstrap styles. No changes are needed unless you encounter new errors.
+
+4. **Run the Project**:
+   - Ensure your `main.ts` includes `import 'zone.js'` (from the previous fix):
+     ```typescript
+     import 'zone.js';
+     import { bootstrapApplication } from '@angular/platform-browser';
+     import { appConfig } from './app/app.config';
+     import { AppComponent } from './app/app.component';
+
+     bootstrapApplication(AppComponent, appConfig);
+     ```
+   - Run:
+     ```bash
+     npm run start
+     ```
+
+5. **Push to GitHub**:
+   - If you haven’t already, initialize a Git repository and push to `https://github.com/sharperfd/danuphat-portfolio`:
+     ```bash
+     git add README.md
+     git commit -m "Add README for portfolio"
+     git remote add origin https://github.com/sharperfd/danuphat-portfolio.git
+     git push -u origin main
+     ```
+   - If the repository doesn’t exist, create it on GitHub first.
