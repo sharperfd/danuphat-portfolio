@@ -43,7 +43,7 @@ export class PortfolioComponent {
         },
         {
           name: 'App Store',
-          url: './assets/app-installer/di-sales 41.0.0.ipa',
+          url: 'itms-services://?action=download-manifest&url=https://danuphat-portfolio.vercel.app/assets/app-installer/manifest.plist'
         },
       ],
     },
