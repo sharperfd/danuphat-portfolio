@@ -43,7 +43,7 @@ export class PortfolioComponent {
         },
         {
           name: 'App Store',
-          url: 'itms-services://?action=download-manifest&url=https://www.krungsri.com/DisalesDownload/manifest.plist',
+          url: './assets/app-installer/di-sales 41.0.0.ipa',
         },
       ],
     },
