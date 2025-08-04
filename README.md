@@ -1,6 +1,6 @@
 # Danuphat Panwong's Portfolio
 
-Welcome to my personal portfolio website, showcasing my skills, education, and professional journey as a Software Engineer. This project is built with **Angular 17+** using standalone components, Bootstrap for styling, and Font Awesome for icons, demonstrating my expertise in modern web development.
+Welcome to my personal portfolio website, showcasing my skills, education, and professional journey as a Software Engineer. This project is built with **Angular 19+** using standalone components, Bootstrap for styling, and Font Awesome for icons, demonstrating my expertise in modern web development.
 
 ## Table of Contents
 - [About Me](#about-me)
